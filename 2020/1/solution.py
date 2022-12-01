@@ -1,5 +1,7 @@
+#!/usr/bin/env python3.10
+
 from stopwatch import Stopwatch
-s = Stopwatch(3)
+s = Stopwatch(1)
 s.start()
 with open("input.txt","r") as file:
   exp = [int(x) for x in file.readlines()]
