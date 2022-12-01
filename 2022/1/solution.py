@@ -17,8 +17,7 @@ for elf in elfList:
   calories.append(sum(elf))
 calories.sort(reverse=True)
 
+s.stop()
 print("First Answer:", calories[0])  
 print("Second Answer:", sum(calories[:3]))
-
-s.stop()
 print("Time taken:", s)
