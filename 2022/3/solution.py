@@ -9,7 +9,7 @@ group = []
 with open("input.txt", "r") as file:
   for line in file:
     line = line.replace("\n", "")
-    half = int(len(line)/2)
+    half = len(line)//2
     for item in line[:half]:
       if item in line[half:]:
         firstSum += priority.index(item)
