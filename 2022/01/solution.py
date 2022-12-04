@@ -13,13 +13,13 @@ def findCalories(file):
 
 with open("test.txt","r") as file:
   calories = findCalories(file)
-  try: 
-    assert calories[0] == 24000
-    assert sum(calories[:3]) == 45000
-  except AssertionError:
-    print("Answer 1 should be", 24000, "is", calories[0])
-    print("Answer 2 should be", 45000, "is", sum(calories[:3]))
-    
+  part1Sol = (calories[0], 24000)
+  part2Sol = (sum(calories[:3]), 45000)
+  if part1Sol[0] != part1Sol[1]:
+    print("Part 1 should be", part1Sol[1], "is", part1Sol[0])
+  if part2Sol[0] != part2Sol[1]:
+    print("Part 2 should be", part2Sol[1], "is", part2Sol[0])
+
 with open("input.txt","r") as file:
   calories = findCalories(file)
   print("Part 1 Answer:", calories[0])  
