@@ -29,8 +29,8 @@ def part2(values):
 
 with open("test.txt", "r") as file:
   values = [int(x) for x in file.readlines()]
-  part1Sol = (part1(values), 514579)
-  part2Sol = (part2(values), 241861950)
+  part1Sol = [part1(values), 514579]
+  part2Sol = [part2(values), 241861950]
   if part1Sol[0] != part1Sol[1]:
     print("Part 1 test should be", part1Sol[1], "is", part1Sol[0])
   if part2Sol[0] != part2Sol[1]:

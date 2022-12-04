@@ -13,8 +13,8 @@ def findCalories(file):
 
 with open("test.txt","r") as file:
   calories = findCalories(file)
-  part1Sol = (calories[0], 24000)
-  part2Sol = (sum(calories[:3]), 45000)
+  part1Sol = [calories[0], 24000]
+  part2Sol = [sum(calories[:3]), 45000]
   if part1Sol[0] != part1Sol[1]:
     print("Part test 1 should be", part1Sol[1], "is", part1Sol[0])
   if part2Sol[0] != part2Sol[1]:

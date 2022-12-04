@@ -16,8 +16,8 @@ with open("test.txt", "r") as file:
   for line in file:
     firstSum += choiceValueP1[line[2]] + outcomeValueP1[line[:3]]
     secondSum += outcomeValueP2[line[2]] + choiceValueP2[line[:3]]
-  part1Sol = (firstSum, 15)
-  part2Sol = (secondSum, 12)
+  part1Sol = [firstSum, 15]
+  part2Sol = [secondSum, 12]
   if part1Sol[0] != part1Sol[1]:
     print("Part 1 test should be", part1Sol[1], "is", part1Sol[0])
   if part2Sol[0] != part2Sol[1]:
