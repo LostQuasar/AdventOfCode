@@ -29,8 +29,12 @@ def part2(values):
 
 with open("test.txt", "r") as file:
   values = [int(x) for x in file.readlines()]
-  assert part1(values) == 514579
-  assert part2(values) == 241861950
+  try: 
+    assert part1(values) == 514579
+    assert part2(values) == 241861950
+  except AssertionError:
+    print("Answer 1 should be", 514579, "is", part1(values))
+    print("Answer 2 should be", 241861950, "is", part2(values))
 
 with open("input.txt","r") as file:
   values = [int(x) for x in file.readlines()]
