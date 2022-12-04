@@ -25,9 +25,9 @@ with open("test.txt", "r") as file:
   part1Sol = (part1(lines), 2)
   part2Sol = (part2(lines), 4)
   if part1Sol[0] != part1Sol[1]:
-    print("Part 1 answer should be", part1Sol[1], "is", part1Sol[0])
+    print("Part 1 test should be", part1Sol[1], "is", part1Sol[0])
   if part2Sol[0] != part2Sol[1]:
-    print("Part 2 answer should be", part2Sol[1], "is", part2Sol[0])
+    print("Part 2 test should be", part2Sol[1], "is", part2Sol[0])
 
 with open("input.txt", "r") as file:
   lines = [x.strip("\n") for x in file.readlines()]
