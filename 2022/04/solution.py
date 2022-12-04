@@ -21,7 +21,7 @@ def part2(lines):
   return i
 
 with open("test.txt", "r") as file:
-  lines = [x.replace("\n","") for x in file.readlines()]
+  lines = [x.strip("\n") for x in file.readlines()]
   try: 
     assert part1(lines) == 2
     assert part2(lines) == 4
