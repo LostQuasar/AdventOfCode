@@ -22,12 +22,12 @@ def part2(lines):
 
 with open("test.txt", "r") as file:
   lines = [x.strip("\n") for x in file.readlines()]
-  part1Sol = [part1(lines), 2]
-  part2Sol = [part2(lines), 4]
-  if part1Sol[0] != part1Sol[1]:
-    print("Part 1 test should be", part1Sol[1], "is", part1Sol[0])
-  if part2Sol[0] != part2Sol[1]:
-    print("Part 2 test should be", part2Sol[1], "is", part2Sol[0])
+  part1Test = [part1(lines), 2]
+  part2Test = [part2(lines), 4]
+  if part1Test[0] != part1Test[1]:
+    print("Part 1 test should be", part1Test[1], "is", part1Test[0])
+  if part2Test[0] != part2Test[1]:
+    print("Part 2 test should be", part2Test[1], "is", part2Test[0])
 
 with open("input.txt", "r") as file:
   lines = [x.strip("\n") for x in file.readlines()]

@@ -18,37 +18,37 @@ def part1(lines):
   moves, stacks_amnt, stacks, top = get_values(lines)
   for move in moves:
     move = move.split(' ')
-    l, m, n = int(move[1]), int(move[3]) - 1, int(move[5]) - 1
-    pickup = stacks[m][:l]
-    del stacks[m][:l]
+    amount, from_stack, to_stack = int(move[1]), int(move[3]) - 1, int(move[5]) - 1
+    pickup = stacks[from_stack][:amount]
+    del stacks[from_stack][:amount]
     for crate in pickup:
-      stacks[n].insert(0, crate)
-  for num in range(stacks_amnt):
-    top += stacks[num][0] 
-  return top
+      stacks[to_stack].insert(0, crate)
+  for index in range(stacks_amnt):
+    top += stacks[index][0]
+
 
 def part2(lines):
   moves, stacks_amnt, stacks, top = get_values(lines)
   for move in moves:
     move = move.split(' ')
-    l, m, n = int(move[1]), int(move[3]) - 1, int(move[5]) - 1
-    pickup = stacks[m][:l]
-    del stacks[m][:l]
+    amount, from_stack, to_stack = int(move[1]), int(move[3]) - 1, int(move[5]) - 1
+    pickup = stacks[from_stack][:amount]
+    del stacks[from_stack][:amount]
     pickup.reverse()
     for crate in pickup:
-      stacks[n].insert(0, crate)
-  for num in range(stacks_amnt):
-    top += stacks[num][0]
+      stacks[to_stack].insert(0, crate)
+  for index in range(stacks_amnt):
+    top += stacks[index][0]
   return top
 
 with open("test.txt", 'r') as file:
   lines = file.read()
-  part1Sol = [part1(lines), "CMZ"]
-  part2Sol = [part2(lines), "MCD"]
-  if part1Sol[0] != part1Sol[1]:
-    print("Part 1 test should be", part1Sol[1], "is", part1Sol[0])
-  if part2Sol[0] != part2Sol[1]:
-    print("Part 2 test should be", part2Sol[1], "is", part2Sol[0])
+  part1Test = [part1(lines), "CMZ"]
+  part2Test = [part2(lines), "MCD"]
+  if part1Test[0] != part1Test[1]:
+    print("Part 1 test should be", part1Test[1], "is", part1Test[0])
+  if part2Test[0] != part2Test[1]:
+    print("Part 2 test should be", part2Test[1], "is", part2Test[0])
 
 with open("input.txt", 'r') as file:
   lines = file.read()
