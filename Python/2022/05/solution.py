@@ -1,19 +1,18 @@
 def get_values(lines):
-    crates, moves = lines.split('\n\n')
-    crates = crates.split('\n')
-    moves = moves.split('\n')[:-1]
-    stacks_amnt = int(crates[-1].replace(' ','')[-1])
-    stacks = []
-    for _ in range(stacks_amnt):
-      stacks.append([])
-    for row in crates[:-1]:
-      for index in range(stacks_amnt):
-        value = row[1 + index * 4]
-        if value != ' ':
-          stacks[index].append(value)
-    top = ''
-    return moves, stacks_amnt, stacks, top
-
+  crates, moves = lines.split('\n\n')
+  crates = crates.split('\n')
+  moves = moves.split('\n')[:-1]
+  stacks_amnt = int(crates[-1].replace(' ','')[-1])
+  stacks = []
+  for _ in range(stacks_amnt):
+    stacks.append([])
+  for row in crates[:-1]:
+    for index in range(stacks_amnt):
+      value = row[1 + index * 4]
+      if value != ' ':
+        stacks[index].append(value)
+  top = ''
+  return moves, stacks_amnt, stacks, top
 
 def part1(lines):
   moves, stacks_amnt, stacks, top = get_values(lines)
